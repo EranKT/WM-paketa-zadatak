@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpDataService } from '../services/http-data.service';
 import { Observable } from 'rxjs';
-import { map, filter } from 'rxjs/operators';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-main-container',
