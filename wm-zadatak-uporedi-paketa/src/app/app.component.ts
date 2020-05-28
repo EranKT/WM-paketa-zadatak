@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'wm-zadatak-uporedi-paketa';
+  title = 'WM Zadatak Uporedi Paketa';
 }
