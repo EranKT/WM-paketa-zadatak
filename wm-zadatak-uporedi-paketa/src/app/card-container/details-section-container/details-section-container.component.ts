@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-details-section-container',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details-section-container.component.scss']
 })
 export class DetailsSectionContainerComponent implements OnInit {
+
+  @Input() included: any = null;
+  @Input() productCategory: string = null;
 
   constructor() { }
 

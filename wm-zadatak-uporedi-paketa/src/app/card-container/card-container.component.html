@@ -2,15 +2,17 @@
 
   <h1 [innerText]="item.name"></h1>
 
-  <!-- <span [innerText]="item.id"></span> -->
+  <!-- <span [innerText]="item.included[0].long_name"></span> -->
 
   <mat-divider></mat-divider>
 
-  <app-details-section-container></app-details-section-container>
+  <app-details-section-container [included]="item.included" [productCategory]="'tv'">
+  </app-details-section-container>
 
   <mat-divider></mat-divider>
 
-  <app-details-section-container></app-details-section-container>
+  <app-details-section-container [included]="item.included" [productCategory]="'net'">
+  </app-details-section-container>
 
   <app-special-offer-section-container></app-special-offer-section-container>
 
