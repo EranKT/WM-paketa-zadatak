@@ -1,1 +1,3 @@
-<p>special-offer-section-container works!</p>
+<div *ngFor="let promotion of promotions">
+  <p [innerText]="cleanPromoText(promotion.promo_text)"></p>
+</div>

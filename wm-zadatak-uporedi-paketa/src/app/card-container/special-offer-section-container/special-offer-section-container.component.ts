@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-special-offer-section-container',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpecialOfferSectionContainerComponent implements OnInit {
 
+  @Input() promotions: any = null;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  cleanPromoText(text: string) {
+    let cleanText = text.slice(0, text.length - 4);
+    cleanText = cleanText.slice(3, cleanText.length);
+    return cleanText;
   }
 
 }

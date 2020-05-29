@@ -14,9 +14,8 @@
   <app-details-section-container [included]="item.included" [productCategory]="'net'">
   </app-details-section-container>
 
-  <span [innerText]="includePromotion"></span>
-
-  <app-special-offer-section-container *ngIf="includePromotion"></app-special-offer-section-container>
+  <app-special-offer-section-container *ngIf="includePromotion" [promotions]="item.promotions">
+  </app-special-offer-section-container>
 
   <mat-divider></mat-divider>
 
