@@ -11,13 +11,6 @@ export class PriceSectionContainerComponent implements OnInit {
   @Input() selectedContractLength: string;
 
   get filteredPrices() {
-    console.log('this.prices.old_price_recurring:',
-      this.prices.old_price_recurring,
-      'this.prices.price_recurring:',
-      this.prices.price_recurring,
-      'this.prices.old_price_promo_text:',
-      this.prices.old_price_promo_text
-    );
 
     return {
       oldPriceRecurring: Object.keys(this.prices.old_price_recurring).

@@ -1,3 +1,5 @@
+<img [src]="categoryImage">
+
 <div *ngFor="let item of included">
 
   <span *ngIf="item.product_category === productCategory" [innerText]="item.long_name"></span>

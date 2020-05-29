@@ -10,6 +10,10 @@ export class DetailsSectionContainerComponent implements OnInit {
   @Input() included: any = null;
   @Input() productCategory: string = null;
 
+  get categoryImage() {
+    console.log(this.included.filter(include => include.product_category === this.productCategory)[0].category_gallery);
+    return this.included.filter(include => include.product_category === this.productCategory)[0].category_gallery;
+  }
   constructor() { }
 
   ngOnInit() {
