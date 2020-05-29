@@ -12,9 +12,8 @@ export class CardContainerComponent implements OnInit {
   @Input() selectedContractLength: string;
 
   get includePromotion() {
-    console.log(this.selectedContractLength);
     return this.item.promotions.
-      map(promotions => promotions.discount_variations.includes(this.selectedContractLength));
+      map(promotions => promotions.discount_variations.includes(this.selectedContractLength))[0];
   }
 
   constructor() { }
