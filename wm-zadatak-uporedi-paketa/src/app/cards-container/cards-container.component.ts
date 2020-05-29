@@ -27,7 +27,7 @@ export class CardsContainerComponent implements OnInit, OnDestroy {
   );
 
 
-  selectedLength = '';
+  selectedLength = null;
   get selectedContractLength() { return this.selectedLength; }
 
   form = new FormGroup({
@@ -49,8 +49,8 @@ export class CardsContainerComponent implements OnInit, OnDestroy {
     this.preselectedContractLength$.pipe(
       filter(data => !data),
       takeWhile(_ => !!this.isAlive),
-      tap(data => this.selectedLength = data),
-      take(1)
+      take(1),
+      tap(data => this.selectedLength = data)
     ).subscribe();
   }
 

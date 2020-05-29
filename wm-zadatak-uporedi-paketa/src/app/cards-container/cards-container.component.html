@@ -6,7 +6,8 @@
 
       <select formControlName="contractLength" class="form-control" (change)="changeContractLength($event)">
 
-        <option *ngFor="let length of contractLengthOptions$ | async">{{length}}</option>
+        <option *ngFor="let length of contractLengthOptions$ | async"
+          selected="length === preselectedContractLength$ |async">{{length}}</option>
 
       </select>
 
@@ -15,7 +16,8 @@
   </form>
 
 
-  <app-card-container *ngFor="let item of data.items" [item]="item" [selectedContractLength]="selectedContractLength">
+  <app-card-container *ngFor="let item of data.items" [item]="item"
+    [selectedContractLength]="selectedContractLength || (preselectedContractLength$ | async)">
 
   </app-card-container>
 
