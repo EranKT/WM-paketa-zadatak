@@ -1,12 +1,10 @@
-<div class="cards-container">
+<div *ngIf="(data$ | async) as data" class="cards-container">
 
-  <app-card-container></app-card-container>
+  <app-card-container *ngFor="let item of data.items" [item]="item">
 
-  <app-card-container></app-card-container>
-
-  <app-card-container></app-card-container>
+  </app-card-container>
 
 </div>
 
 
-<span [innerText]="(data$ | async)"></span>
+<!-- <span [innerText]="(data$ | async)"></span> -->

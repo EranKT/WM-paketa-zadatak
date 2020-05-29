@@ -1,15 +1,21 @@
-<p>card-container title</p>
+<div *ngIf="!!item">
 
-<mat-divider></mat-divider>
+  <h1 [innerText]="item.name"></h1>
 
-<app-details-section-container></app-details-section-container>
+  <!-- <span [innerText]="item.id"></span> -->
 
-<mat-divider></mat-divider>
+  <mat-divider></mat-divider>
 
-<app-details-section-container></app-details-section-container>
+  <app-details-section-container></app-details-section-container>
 
-<app-special-offer-section-container></app-special-offer-section-container>
+  <mat-divider></mat-divider>
 
-<mat-divider></mat-divider>
+  <app-details-section-container></app-details-section-container>
 
-<app-price-section-container></app-price-section-container>
+  <app-special-offer-section-container></app-special-offer-section-container>
+
+  <mat-divider></mat-divider>
+
+  <app-price-section-container></app-price-section-container>
+
+</div>
