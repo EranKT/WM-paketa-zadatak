@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpDataService } from '../services/http-data.service';
 import { Observable } from 'rxjs';
-import { filter, map, take, takeWhile } from 'rxjs/operators';
+import { filter, map, take, takeWhile, tap } from 'rxjs/operators';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cards-container',
@@ -16,9 +17,26 @@ export class CardsContainerComponent implements OnInit, OnDestroy {
 
   data$: Observable<any> = this.dataService.getConfig();
 
+  contractLengthOptions$: Observable<string[]> = this.data$.pipe(
+    map(data => data.contract_length.contract_length_options),
+    tap(types => console.log(types))
+  );
+
   preselectedContractLength$: Observable<string> = this.data$.pipe(
     map(data => data.contract_length.preselected_contract_length)
   );
+
+
+  selectedLength = '';
+  get selectedContractLength() { return this.selectedLength; }
+
+  form = new FormGroup({
+    contractLength: new FormControl('', Validators.required)
+  });
+
+  changeContractLength(length) {
+    this.selectedLength = length.target.value;
+  }
 
   ngOnInit() {
 
@@ -31,6 +49,7 @@ export class CardsContainerComponent implements OnInit, OnDestroy {
     this.preselectedContractLength$.pipe(
       filter(data => !data),
       takeWhile(_ => !!this.isAlive),
+      tap(data => this.selectedLength = data),
       take(1)
     ).subscribe();
   }
