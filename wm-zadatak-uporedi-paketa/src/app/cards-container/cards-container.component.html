@@ -1,6 +1,7 @@
 <div *ngIf="(data$ | async) as data" class="cards-container">
 
-  <app-card-container *ngFor="let item of data.items" [item]="item">
+  <app-card-container *ngFor="let item of data.items" [item]="item"
+    [selectedContractLength]="preselectedContractLength$ | async">
 
   </app-card-container>
 
@@ -8,3 +9,4 @@
 
 
 <!-- <span [innerText]="(data$ | async)"></span> -->
+<!-- <span [innerText]="preselectedContractLength$ | async"></span> -->
