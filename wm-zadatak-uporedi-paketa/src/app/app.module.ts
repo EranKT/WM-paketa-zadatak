@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { MainContainerModule } from './main-container/main-container.module';
+import { CardsContainerModule } from './cards-container/cards-container.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { MainContainerModule } from './main-container/main-container.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    MainContainerModule
+    CardsContainerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

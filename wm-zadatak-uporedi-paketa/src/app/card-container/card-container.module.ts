@@ -8,9 +8,20 @@ import { PriceSectionContainerComponent } from './price-section-container/price-
 
 
 @NgModule({
-  declarations: [CardContainerComponent, DetailsSectionContainerComponent, SpecialOfferSectionContainerComponent, PriceSectionContainerComponent],
   imports: [
     CommonModule
+  ],
+  declarations: [
+    CardContainerComponent,
+    DetailsSectionContainerComponent,
+    SpecialOfferSectionContainerComponent,
+    PriceSectionContainerComponent
+  ],
+  exports: [
+    CardContainerComponent,
+    DetailsSectionContainerComponent,
+    SpecialOfferSectionContainerComponent,
+    PriceSectionContainerComponent
   ]
 })
 export class CardContainerModule { }
