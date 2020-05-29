@@ -4,14 +4,14 @@ import { CardContainerComponent } from './card-container.component';
 import { DetailsSectionContainerComponent } from './details-section-container/details-section-container.component';
 import { SpecialOfferSectionContainerComponent } from './special-offer-section-container/special-offer-section-container.component';
 import { PriceSectionContainerComponent } from './price-section-container/price-section-container.component';
-// import { MatDividerModule } from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 
 @NgModule({
   imports: [
     CommonModule,
-    // MatDividerModule
+    MatDividerModule
 
   ],
   declarations: [
