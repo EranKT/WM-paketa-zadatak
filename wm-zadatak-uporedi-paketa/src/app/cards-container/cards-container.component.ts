@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpDataService } from '../services/http-data.service';
 import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { CardData } from '../card-container/models/card-data.model';
 
 @Component({
   selector: 'app-cards-container',
@@ -12,7 +13,7 @@ export class CardsContainerComponent implements OnInit {
 
   constructor(private dataService: HttpDataService) { }
 
-  data$: Observable<string> = this.dataService.getConfig();
+  data$: Observable<any> = this.dataService.getConfig();
 
   ngOnInit() {
 

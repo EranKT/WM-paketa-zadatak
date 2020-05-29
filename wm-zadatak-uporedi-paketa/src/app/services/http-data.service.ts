@@ -14,7 +14,7 @@ export class HttpDataService {
 
   getConfig() {
 
-    return this.http.get(this.dataUrl, { responseType: 'text' });
+    return this.http.get(this.dataUrl, { responseType: 'json' });
 
   }
 }
