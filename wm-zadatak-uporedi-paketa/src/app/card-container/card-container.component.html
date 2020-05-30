@@ -1,8 +1,10 @@
-<div *ngIf="!!item">
+<div class="card-container" *ngIf="!!item">
+
+  <span class="promo-text" *ngIf="isRecommended" [innerText]="promoText"></span>
+
+  <mat-divider *ngIf="isRecommended"></mat-divider>
 
   <h1 [innerText]="item.name"></h1>
-
-  <!-- <span [innerText]="item.included[0].long_name"></span> -->
 
   <mat-divider></mat-divider>
 

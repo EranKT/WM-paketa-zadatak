@@ -1,6 +1,10 @@
 <img [src]="categoryImage">
 
-<div *ngFor="let item of included">
+<div class="list-container">
 
-  <span *ngIf="item.product_category === productCategory" [innerText]="item.long_name"></span>
+  <div *ngFor="let item of included">
+
+    <li *ngIf="item.product_category === productCategory" [innerText]="item.long_name"></li>
+  </div>
+
 </div>

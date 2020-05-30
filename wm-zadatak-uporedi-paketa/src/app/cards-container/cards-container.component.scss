@@ -5,11 +5,25 @@
   form {
     display: flex;
     justify-content: flex-end;
+    padding-right: 27rem;
+    padding-bottom: 4rem;
+  }
+
+  .form-control {
+    background-color: linen;
+    border: none;
+    border-radius: 5%;
+    height: 3rem;
+  }
+
+  option {
+    background-color: linen;
+    height: 3rem;
   }
 
   .cards-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-self: center;
     width: 100%;
   }

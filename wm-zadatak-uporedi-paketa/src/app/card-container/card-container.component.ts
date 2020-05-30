@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardContainerComponent implements OnInit {
 
   @Input() item: any = null;
+  @Input() promoText: any = null;
 
   @Input() selectedContractLength: string;
 
@@ -15,6 +16,8 @@ export class CardContainerComponent implements OnInit {
     return this.item.promotions.
       map(promotions => promotions.discount_variations.includes(this.selectedContractLength))[0];
   }
+
+  get isRecommended() { return this.item.is_featured; }
 
   constructor() { }
 

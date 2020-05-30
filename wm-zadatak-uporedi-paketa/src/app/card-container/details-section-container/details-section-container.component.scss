@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+
+  img {
+    padding: 2rem;
+  }
+
+  .list-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
