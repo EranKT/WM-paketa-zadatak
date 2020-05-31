@@ -2,8 +2,7 @@
 
   <div class="form-group">
 
-    <select class="select-menu" formControlName="contractLength" class="form-control"
-      (change)="changeContractLength($event)">
+    <select formControlName="contractLength" class="form-control" (change)="changeContractLength($event)">
 
       <option *ngFor="let length of contractLengthOptions$ | async"
         selected="length === preselectedContractLength$ |async">{{length}}</option>
