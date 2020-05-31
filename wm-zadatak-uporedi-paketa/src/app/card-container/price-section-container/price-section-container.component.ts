@@ -43,7 +43,8 @@ export class PriceSectionContainerComponent implements OnInit {
   }
 
   priceText(price): string {
-    return `${price} rsd/mes.`;
+    const priceText = `${price} ${+price > 0 ? 'rsd/mes.' : ''}`;
+    return priceText;
   }
 
 }
