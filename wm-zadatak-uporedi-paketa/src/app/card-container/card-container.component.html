@@ -13,7 +13,7 @@
 
   <mat-divider></mat-divider>
 
-  <app-details-section-container [included]="item.included" [productCategory]="'net'">
+  <app-details-section-container [included]="item.included" [productCategory]="'net'" [sectionHeight]="netSectionHight">
   </app-details-section-container>
 
   <app-special-offer-section-container *ngIf="includePromotion" [promotions]="item.promotions">

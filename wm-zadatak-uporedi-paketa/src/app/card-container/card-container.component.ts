@@ -25,10 +25,17 @@ export class CardContainerComponent implements OnInit {
     let maxLines = 0;
     this.items.forEach(item => {
       noOfLines = item.included.filter(include => include.product_category === 'tv');
-
       if (noOfLines.length > maxLines) { maxLines = noOfLines.length; }
+    });
+    return maxLines;
+  }
 
-      //   console.log('noOfTV lines:', noOfLines, 'MAX LINES:', maxLines);
+  get netSectionHight() {
+    let noOfLines;
+    let maxLines = 0;
+    this.items.forEach(item => {
+      noOfLines = item.included.filter(include => include.product_category === 'net');
+      if (noOfLines.length > maxLines) { maxLines = noOfLines.length; }
     });
     return maxLines;
   }

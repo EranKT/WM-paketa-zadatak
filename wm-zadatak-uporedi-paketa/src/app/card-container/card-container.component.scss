@@ -1,7 +1,7 @@
 :host {
   border-radius: 5%;
   width: 18%;
-  background-color: linen;
+  background-color: #F7F3E9;
   margin: 0px 18px 0px 18px;
   height: 100%;
 
@@ -18,11 +18,25 @@
   }
 
   .promo-text {
-    font-size: 2em;
     text-align: center;
+    font-size: 1em;
+    min-height: 2em;
+    margin: 0.5em;
+    font-family: sans-serif;
+    color: #611259;
   }
 
   h1 {
     text-align: center;
+    font-size: 3em;
+    margin: 0.5em;
+    font-weight: 500;
+    min-height: 2em;
+    font-family: sans-serif;
+    color: #611259;
+  }
+
+  app-details-section-container {
+    width: 100%;
   }
 }
