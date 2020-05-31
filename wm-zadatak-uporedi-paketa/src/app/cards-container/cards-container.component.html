@@ -16,7 +16,7 @@
 
 <div *ngIf="(data$ | async) as data" class="cards-container">
 
-  <app-card-container *ngFor="let item of data.items" [item]="item" [promoText]="data.promo_text"
+  <app-card-container *ngFor="let item of data.items" [item]="item" [items]="data.items" [promoText]="data.promo_text"
     [selectedContractLength]="selectedContractLength || (preselectedContractLength$ | async)">
 
   </app-card-container>

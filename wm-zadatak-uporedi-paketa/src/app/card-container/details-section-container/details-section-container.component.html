@@ -1,10 +1,12 @@
-<img [src]="categoryImage">
+<div class="details-section-container" [style]="sectionHeigh">
+  <img [src]="categoryImage">
 
-<div class="list-container">
+  <div class="list-container">
 
-  <div *ngFor="let item of included">
+    <div *ngFor="let item of updatedIncludedArray">
 
-    <li *ngIf="item.product_category === productCategory" [innerText]="item.long_name"></li>
+      <li *ngIf="item.long_name" [innerText]="item.long_name"></li>
+    </div>
+
   </div>
-
 </div>

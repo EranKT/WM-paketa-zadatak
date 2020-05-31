@@ -18,16 +18,15 @@ export class CardsContainerComponent implements OnInit, OnDestroy {
   data$: Observable<any> = this.dataService.getConfig();
 
   contractLengthOptions$: Observable<string[]> = this.data$.pipe(
-    map(data => data.contract_length.contract_length_options),
-    tap(types => console.log(types))
+    map(data => data.contract_length.contract_length_options)
   );
 
   preselectedContractLength$: Observable<string> = this.data$.pipe(
     map(data => data.contract_length.preselected_contract_length)
   );
 
-
   selectedLength = null;
+
   get selectedContractLength() { return this.selectedLength; }
 
   form = new FormGroup({

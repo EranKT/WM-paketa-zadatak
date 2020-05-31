@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardContainerComponent implements OnInit {
 
   @Input() item: any = null;
+  @Input() items: any = null;
   @Input() promoText: any = null;
 
   @Input() selectedContractLength: string;
@@ -18,6 +19,19 @@ export class CardContainerComponent implements OnInit {
   }
 
   get isRecommended() { return this.item.is_featured; }
+
+  get tvSectionHight() {
+    let noOfLines;
+    let maxLines = 0;
+    this.items.forEach(item => {
+      noOfLines = item.included.filter(include => include.product_category === 'tv');
+
+      if (noOfLines.length > maxLines) { maxLines = noOfLines.length; }
+
+      //   console.log('noOfTV lines:', noOfLines, 'MAX LINES:', maxLines);
+    });
+    return maxLines;
+  }
 
   constructor() { }
 
