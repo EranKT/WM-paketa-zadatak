@@ -1,4 +1,4 @@
 <div class="promotion-container" *ngFor="let promotion of promotions">
   <img [src]="promotion.promotion_image">
-  <p [innerText]="cleanPromoText(promotion.promo_text)"></p>
+  <p class="promo-text" [innerText]="cleanPromoText(promotion.promo_text)"></p>
 </div>
