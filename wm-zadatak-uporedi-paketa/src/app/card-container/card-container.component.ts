@@ -45,4 +45,10 @@ export class CardContainerComponent implements OnInit {
   ngOnInit() {
   }
 
+  cardClicked() {
+    alert(`    id: ${this.item.id}
+    plan: ${this.item.name}
+    ugovor: ${this.selectedContractLength}`);
+  }
+
 }
