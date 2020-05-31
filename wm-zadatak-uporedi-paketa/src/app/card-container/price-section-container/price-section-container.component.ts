@@ -42,4 +42,8 @@ export class PriceSectionContainerComponent implements OnInit {
     return cleanText;
   }
 
+  priceText(price): string {
+    return `${price} rsd/mes.`;
+  }
+
 }

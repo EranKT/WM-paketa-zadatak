@@ -1,3 +1,38 @@
 :host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: sans-serif;
+
+  .price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+
+  .old-price {
+    text-align: center;
+    text-decoration: line-through;
+    font-size: 1.3em;
+    margin: 0.5em;
+    font-weight: 500;
+    min-height: 2em;
+    color: #611259;
+  }
+
+  .current-price {
+    text-align: center;
+    font-size: 1.7em;
+    margin: 0.5em;
+    font-weight: 500;
+    min-height: 2em;
+    color: #611259;
+  }
+
+  .comment-text {
+    margin: 1em;
+  }
 }

@@ -1,5 +1,10 @@
-<span [innerText]="filteredPrices.oldPriceRecurring"></span>
+<div class="price-container">
 
-<span [innerText]="filteredPrices.priceRecurring"></span>
+  <span class="old-price" [innerText]="priceText(filteredPrices.oldPriceRecurring)"></span>
 
-<span [innerText]="filteredPrices.oldPricePromoText"></span>
+  <span class="current-price" [innerText]="priceText(filteredPrices.priceRecurring)"></span>
+
+</div>
+
+
+<span class="comment-text" [innerText]="filteredPrices.oldPricePromoText"></span>
